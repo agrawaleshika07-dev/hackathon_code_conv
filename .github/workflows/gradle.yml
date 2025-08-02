@@ -19,5 +19,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Install Gradle
+        uses: gradle/gradle-build-action@v2
+
       - name: Build with system Gradle
         run: gradle clean build -x test
